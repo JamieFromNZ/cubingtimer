@@ -1,6 +1,7 @@
 function generateScramble() {
+    const scrambleType = document.getElementById('scrambleType').value;
     const scrambler = new Scrambo();
-    const scramble = scrambler.get(1)[0];
+    const scramble = scrambler.type(scrambleType).get(1)[0];
     displayScramble(scramble);
 }
 
@@ -10,5 +11,9 @@ function displayScramble(scramble) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    generateScramble();
+});
+
+document.getElementById('scrambleType').addEventListener('change', () => {
     generateScramble();
 });

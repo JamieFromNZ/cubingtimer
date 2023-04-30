@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,33 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
 </head>
+
 <body>
     <header>
         <img src="assets/images/logo.svg" alt="CubeChrono Logo">
-        <div id="scramble"></div>
+        <div id="scramble-section">
+            <div id="scramble-type-container">
+                <select id="scrambleType">
+                    <option value="222">2x2</option>
+                    <option value="333">3x3</option>
+                    <option value="444">4x4</option>
+                    <option value="555">5x5</option>
+                    <option value="666">6x6</option>
+                    <option value="777">7x7</option>
+                    <option value="333ni">3x3 No Inspection</option>
+                    <option value="333bf">3x3 Blindfolded</option>
+                    <option value="333fm">3x3 Fewest Moves</option>
+                    <option value="333oh">3x3 One-Handed</option>
+                    <option value="333ft">3x3 With Feet</option>
+                    <option value="minx">Megaminx</option>
+                    <option value="pyram">Pyraminx</option>
+                    <option value="skewb">Skewb</option>
+                    <option value="sq1">Square-1</option>
+                    <option value="clock">Rubik's Clock</option>
+                </select>
+            </div>
+            <p id="scramble"></p>
+        </div>
     </header>
     <main>
         <div id="times-list-container">
@@ -34,4 +58,5 @@
     <script src="js/settings.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -118,3 +118,45 @@ footer {
     cursor: pointer;
     color: #f1f1f1; /* Add this line to set the color of the button */
 }
+
+#scramble-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Add some spacing between scramble and scramble type dropdown */
+  #scramble-display {
+    margin-bottom: 1rem;
+  }
+  
+  #scramble-type-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  #scramble-type-container label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  #scrambleType {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 0.25rem;
+    border-radius: 3px;
+  }
+  
+  #scramble {
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+  }
