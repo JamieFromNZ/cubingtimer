@@ -1,0 +1,46 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a9cda;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+button {
+    background-color: #1a9cda;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1688bf;
+}
+
+footer {
+    background-color: #1a9cda;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}

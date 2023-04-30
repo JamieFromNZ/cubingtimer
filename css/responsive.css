@@ -1,0 +1,6 @@
+/* Responsive styles for different screen sizes */
+@media (max-width: 768px) {
+    #timer-display {
+        font-size: 3rem;
+    }
+}
