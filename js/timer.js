@@ -50,17 +50,25 @@ function unsetReadyState() {
     timerDisplay.style.color = 'black';
 }
 
+// Function to get object to store into db
+function getSolveObject(timeNo, time) {
+    return {
+        time: time,
+        timeNo: timeNo,
+        comment: ""
+    }
+}
+
 // Function to save the recorded time to local storage
-function saveRecordedTime(time) {
+function saveRecordedTime(solve) {
     // Retrieve the existing times from local storage or initialize an empty array
     const recordedTimes = JSON.parse(localStorage.getItem('recordedTimes')) || [];
 
     // Add the new recorded time to the array
-    recordedTimes.push(time);
+    recordedTimes.push(solve);
 
     // Save the updated array of recorded times to local storage
     localStorage.setItem('recordedTimes', JSON.stringify(recordedTimes));
-    console.log(localStorage);
 }
 
 // Event listener for keydown events (e.g., when the spacebar is pressed)
@@ -72,13 +80,22 @@ document.addEventListener('keydown', (event) => {
     if (!isRunning && !isReady) {
         setReadyState();
     }
-    
+
     // If the timer is running, stop the timer
     else if (isRunning) {
         stopTimer();
-        saveRecordedTime(timerDisplay.innerText);
+
+        // Retrieve the existing times from local storage or initialize an empty array
+        const recordedTimes = JSON.parse(localStorage.getItem('recordedTimes')) || [];
+
+        // Solve object
+        let solve = getSolveObject(recordedTimes.length, timerDisplay.innerText);
+        saveRecordedTime(solve);
+
+        // Call the addTimeToList function with the correct time number
+        addTimeToList(solve);
     }
-    
+
 });
 
 // Event listener for keyup events (e.g., when the spacebar is released)

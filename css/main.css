@@ -25,6 +25,39 @@ main {
     margin: 2rem 0;
 }
 
+#times-list-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border-right: 1px solid #e0e0e0;
+}
+
+#times-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#times-list li {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#times-list li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+#times-list li:last-child {
+    border-bottom: none;
+}
+
 button {
     background-color: #1a9cda;
     color: #fff;
@@ -43,4 +76,45 @@ footer {
     color: #fff;
     padding: 1rem;
     text-align: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+}
+
+.dropdown-content button:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-btn {
+    background-color: #1a9cda;
+    border: none;
+    cursor: pointer;
+    color: #f1f1f1; /* Add this line to set the color of the button */
 }
