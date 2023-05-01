@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CubeChrono - Speedcubing Timer</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/scramble.css">
+    <link rel="stylesheet" href="css/times.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
 </head>
 
 <body>
     <header>
-        <img src="assets/images/logo.svg" alt="CubeChrono Logo">
+        <h1>CubeChrono</h1>
+        
+    </header>
+    <main>
         <div id="scramble-section">
             <div id="scramble-type-container">
                 <select id="scrambleType">
@@ -36,11 +41,17 @@
             </div>
             <p id="scramble"></p>
         </div>
-    </header>
-    <main>
         <div id="times-list-container">
+            <div id="times-list-header">
+                <span>Times</span>
+            </div>
+            <div id="collapse-btn-container">
+              <button id="collapse-btn" onclick="toggleCollapse()">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+            </div>
             <ul id="times-list"></ul>
-        </div>
+          </div>
 
         <div id="timer-display">00:00.00</div>
         <button id="clear-storage-btn">Clear Local Dtorage (dev)</button>

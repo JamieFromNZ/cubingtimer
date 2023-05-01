@@ -73,7 +73,6 @@ function addTimeToList(solve) {
     });
 }
 
-
 // Function to add 2 seconds to a given time string
 function addTwoSeconds(time) {
     const timeParts = time.split('.');
@@ -84,3 +83,12 @@ function addTwoSeconds(time) {
 
     return `${seconds.toString().padStart(2, '0')}.${milliseconds.toString().padStart(3, '0')}`;
 }
+
+function toggleCollapse() {
+    const timesListContainer = document.getElementById("times-list-container");
+    const collapseBtnContainer = document.getElementById("collapse-btn-container");
+    const collapseBtn = document.getElementById("collapse-btn");
+    timesListContainer.classList.toggle("collapsed");
+    collapseBtnContainer.classList.toggle("collapsed");
+    collapseBtn.classList.toggle("collapsed");
+  }

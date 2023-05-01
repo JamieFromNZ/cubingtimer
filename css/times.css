@@ -1,0 +1,127 @@
+#timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+#times-list-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border-right: 1px solid #e0e0e0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.5s ease;
+}
+
+#times-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#times-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#times-list-header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #1a9cda;
+    transition: transform 0.2s ease;
+}
+
+#times-list-header button:hover {
+    transform: scale(1.2);
+}
+
+#times-list-header span {
+    text-transform: uppercase;
+}
+
+
+#times-list li {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#times-list li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+#times-list li:last-child {
+    border-bottom: none;
+}
+
+#times-list .time {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#times-list .time-actions {
+    display: flex;
+    align-items: center;
+}
+
+#times-list .time-actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #1a9cda;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+#times-list .time-actions button:hover {
+    transform: scale(1.2);
+}
+
+#collapse-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+#collapse-btn {
+    background-color: #1a9cda;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    margin-right: -1rem;
+    cursor: pointer;
+    transition: margin-right 0.5s ease-in-out;
+}
+
+#collapse-btn:hover {
+    background-color: #1688bf;
+}
+
+#times-list-container.collapsed {
+    width: 50px;
+}
+
+#collapse-btn-container.collapsed {
+    justify-content: center;
+}
+
+#collapse-btn.collapsed {
+    margin-right: 0;
+}
